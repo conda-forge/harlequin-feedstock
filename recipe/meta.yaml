@@ -1,5 +1,5 @@
 {% set name = "harlequin" %}
-{% set version = "1.3.1" %}
+{% set version = "1.4.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/harlequin-{{ version }}.tar.gz
-  sha256: 36eb34dc0faf4ffafe92c3ca4d605b71044c7616d26e1e5bd5acce82d434bd1f
+  sha256: d51f66bf9572314e4476a9970969c2a9098af7509b038fa29fa2bf73700342a7
 
 build:
   entry_points:
@@ -22,8 +22,9 @@ requirements:
     - poetry-core
     - pip
   run:
+    - rich-click >=1.7.1,<2.0.0
     - importlib-metadata >=4.6.0
-    - textual-fastdatatable ==0.3.0
+    - textual-fastdatatable ==0.4.0
     - python >=3.8.0,<4.0.0
     - textual ==0.41.0
     - textual-textarea ==0.7.3
