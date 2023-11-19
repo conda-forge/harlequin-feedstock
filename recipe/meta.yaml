@@ -22,7 +22,6 @@ requirements:
     - poetry-core
     - pip
   run:
-    - duckdb >=0.8.0
     - rich-click >=1.7.1,<2.0.0
     - importlib-metadata >=4.6.0
     - textual-fastdatatable ==0.4.0
