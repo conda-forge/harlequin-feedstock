@@ -1,5 +1,5 @@
 {% set name = "harlequin" %}
-{% set version = "1.7.0" %}
+{% set version = "1.7.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/harlequin-{{ version }}.tar.gz
-  sha256: ee56e3c7b190ef075061a91de7f13b474e490bdded4f5e3f0123f6f0024943d5
+  sha256: 68d17f8ed81d96769264e50e982da11696ccb5973dc86858d1be0f26b270e5a2
 
 build:
   entry_points:
@@ -27,7 +27,7 @@ requirements:
     - tomlkit >=0.12.3,<0.13.0
     - rich-click >=1.7.1,<2.0.0
     - importlib-metadata >=4.6.0
-    - textual-fastdatatable ==0.4.0
+    - textual-fastdatatable ==0.4.1
     - python >=3.8.0,<4.0.0
     - textual ==0.41.0
     - textual-textarea ==0.9.2
