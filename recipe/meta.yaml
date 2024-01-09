@@ -1,5 +1,5 @@
 {% set name = "harlequin" %}
-{% set version = "1.7.3" %}
+{% set version = "1.9.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/harlequin-{{ version }}.tar.gz
-  sha256: 6c849d769eb49eafc3add19b209f5c49e5d655775094d84bbece8bb81b11d774
+  sha256: 7697322eba1f9a61b08291d7059f32bf672cbd20ca3a0cb4dd89f151472551cf
 
 build:
   entry_points:
