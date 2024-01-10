@@ -9,6 +9,8 @@ Package license: MIT
 
 Summary: The DuckDB IDE for Your Terminal.
 
+Development: https://github.com/tconbeer/harlequin
+
 Current build status
 ====================
 
