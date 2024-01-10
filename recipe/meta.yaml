@@ -14,7 +14,7 @@ build:
     - harlequin = harlequin.cli:harlequin
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 0
+  number: 1
 
 requirements:
   host:
@@ -48,6 +48,7 @@ test:
 
 about:
   home: https://harlequin.sh
+  dev_url: https://github.com/tconbeer/harlequin
   summary: The DuckDB IDE for Your Terminal.
   license: MIT
   license_file: LICENSE
