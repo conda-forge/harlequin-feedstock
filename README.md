@@ -145,6 +145,6 @@ In order to produce a uniquely identifiable distribution:
 Feedstock Maintainers
 =====================
 
-* [@moritzwilksch](https://github.com/moritzwilksch/)
-* [@xhochy](https://github.com/xhochy/)
+* [@alexmalins](https://github.com/alexmalins/)
+* [@conda-forge/harlequin](https://github.com/conda-forge/harlequin/)
 
