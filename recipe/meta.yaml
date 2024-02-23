@@ -22,7 +22,6 @@ requirements:
     - poetry-core
     - pip
   run:
-    - duckdb >=0.8.0
     - python-duckdb >=0.8.0
     - questionary >=2.0.1,<3.0.0
     - tomli >=2.0.1,<3.0.0
