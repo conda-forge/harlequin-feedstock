@@ -1,5 +1,5 @@
 {% set name = "harlequin" %}
-{% set version = "1.20.0" %}
+{% set version = "1.21.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/harlequin-{{ version }}.tar.gz
-  sha256: 350eb346923fee69890b1ae4e913a0f5bcb076a14fcbaf256bcf5d244ada97b9
+  sha256: c2095c1239067a02d420f69800c3ee807faa203d738cf7f51eddeb73b784e852
 
 build:
   entry_points:
@@ -35,6 +35,7 @@ requirements:
     - click >=8.1.3,<9.0.0
     - shandy-sqlfmt >=0.19.0
     - platformdirs >=3.10,<5.0
+    - numpy <2.0.0
 
 test:
   imports:
