@@ -6,7 +6,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/harlequin-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/harlequin-{{ version }}.tar.gz
   sha256: 8319da69b07afd063e1296ebba1569374daa171489b97bd35d2dbdae802e6144
 
 build:
@@ -14,11 +14,11 @@ build:
     - harlequin = harlequin.cli:harlequin
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 0
+  number: 1
 
 requirements:
   host:
-    - python >=3.8,<4.0
+    - python {{ python_min }}
     - poetry-core
     - pip
   run:
@@ -28,7 +28,7 @@ requirements:
     - tomlkit >=0.12.3,<0.14.0
     - rich-click >=1.7.1,<2.0.0
     - importlib-metadata >=4.6.0
-    - python >=3.8.0,<4.0.0
+    - python >={{ python_min }},<4.0.0
     - textual 0.85.0
     - textual-fastdatatable 0.10.0
     - textual-textarea 0.14.4
@@ -45,6 +45,7 @@ test:
     - harlequin --help
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://harlequin.sh
