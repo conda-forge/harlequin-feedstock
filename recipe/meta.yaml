@@ -1,5 +1,5 @@
 {% set name = "harlequin" %}
-{% set version = "2.0.1" %}
+{% set version = "2.0.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/harlequin-{{ version }}.tar.gz
-  sha256: d44c8abd9f6d0b8b5fd2975add08f475859a36ebf59fd373a5d3c9e6d4b1c384
+  sha256: e991ada24ddfcbf5409af3100f95f29aad7dd7e33dcb0ae833d0078a19a78c41
 
 build:
   entry_points:
@@ -30,12 +30,12 @@ requirements:
     - importlib-metadata >=8.0
     - python >={{ python_min }},<4.0.0
     - textual ==0.89.1
-    - textual-fastdatatable ==0.11.0
+    - textual-fastdatatable ==0.12.0
     - textual-textarea ==0.15.0
     - click >=8.1.3,<9.0.0
     - shandy-sqlfmt >=0.19.0
     - platformdirs >=3.10,<5.0
-    - numpy <2.0.0,>=1.21.0
+    - numpy >=2.0.0,<2.1.0
 
 test:
   imports:
