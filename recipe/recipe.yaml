@@ -15,16 +15,19 @@ source:
 build:
   number: 0
   noarch: python
-  script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+  script:
+    - sed -i 's|src/||g' pyproject.toml
+    - ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   python:
     entry_points:
       - harlequin = harlequin.cli:harlequin
 
 requirements:
   host:
-    - python ${{ python_min }}
+    - python ${{ python_min }}.*
     - hatchling
     - pip
+    - sed
   run:
     - tree-sitter-sql ==0.3.7
     - tree_sitter >=0.23.0,<0.25.0
@@ -45,14 +48,13 @@ requirements:
 
 tests:
   - python:
+      python_version: ${{ python_min }}.*
       imports:
         - harlequin
   - requirements:
       run:
-        - pip
-        - python ${{ python_min }}
+        - python ${{ python_min }}.*
     script:
-      - pip check
       - harlequin --help
 
 about:
