@@ -3,7 +3,7 @@ About harlequin-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/harlequin-feedstock/blob/main/LICENSE.txt)
 
-Home: https://harlequin.sh
+Home: https://harlequin.sh/
 
 Package license: MIT
 
