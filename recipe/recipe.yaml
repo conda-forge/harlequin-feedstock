@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: harlequin
-  version: 2.2.0
+  version: "2.2.1"
 
 package:
   name: ${{ name|lower }}
@@ -10,14 +10,12 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/harlequin-${{ version }}.tar.gz
-  sha256: d8489bea2a2d466c9b1e4f1499cddc8a996d15b868f9d76493ca8c051e6ec9ec
+  sha256: 6ed1b5dce6fb0923b2c0738c30c2233a031f0fedc26fda0a608aac7883ceb17c
 
 build:
   number: 0
   noarch: python
-  script:
-    - sed -i 's|src/||g' pyproject.toml
-    - ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+  script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   python:
     entry_points:
       - harlequin = harlequin.cli:harlequin
