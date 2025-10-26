@@ -15,9 +15,7 @@ source:
 build:
   number: 0
   noarch: python
-  script:
-    - sed -i 's|src/||g' pyproject.toml
-    - ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+  script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   python:
     entry_points:
       - harlequin = harlequin.cli:harlequin
