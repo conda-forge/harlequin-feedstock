@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: harlequin
-  version: "2.5.1"
+  version: "2.5.2"
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/harlequin-${{ version }}.tar.gz
-  sha256: 8e9dc29df55a7cb546fdbc9999b3df365f825cba537d98160644225a7b1d0d57
+  sha256: 7e02cb25f893ab72f486de79bee109b866762a69f5be28d495581ce93d16f870
 
 build:
   number: 0
