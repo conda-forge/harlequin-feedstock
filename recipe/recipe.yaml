@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: harlequin
-  version: "2.12.1"
+  version: 2.16.0
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/harlequin-${{ version }}.tar.gz
-  sha256: 66c0ccf7090903d164a6e00cc88b9fc3844088e328c36556049609553a63fcb6
+  sha256: 6761871ef61127f6fec7190700e53e4e74c17c684604bdcfe90ba45399a5a03f
 
 build:
   number: 0
@@ -30,17 +30,17 @@ requirements:
     - python-duckdb >=1.1.1
     - questionary ==2.1.1
     - tomlkit >=0.15.1,<0.16.0
-    - rich-click ==1.9.8
+    - rich-click ==1.9.9
     - python >=${{ python_min }}
     - textual ==8.2.8
-    - textual-fastdatatable ==0.19.0
-    - textual-textarea ==0.18.1
-    - click ==8.4.2
+    - textual-fastdatatable ==0.19.3
+    - textual-textarea ==0.18.4
+    - click ==8.5.0
     - shandy-sqlfmt >=0.28.2
     - platformdirs >=3.10,<5.0
     - pyperclip >=1.9,<2
     - tree-sitter-sql >=0.3.11,<0.4
-    - wcwidth >=0.2.13,<0.9
+    - wcwidth >=0.9.1,<0.10
     - tree_sitter >=0.25,<0.27
     - tomli >=2.0.1
     - msgspec >=0.19,<1
